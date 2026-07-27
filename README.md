@@ -1,26 +1,28 @@
-# the specimen
+# sagrada-specimen
 
-A repository with a **planted history**, disclosed as such: every rule here
-was born, killed, restored, or merged back by scripted commits with fixed
-dates — so you can watch the instrument work before pointing it at anything
-of yours.
+A test repo with scripted git history for
+[sagrada-linter](https://pypi.org/project/sagrada-linter). Every commit is
+synthetic, with fixed dates. Nothing here measured anything real.
 
-Low stakes, by design. Two ways in:
+## Try it
 
 ```
-uvx sagrada-linter read .        # after cloning this repo
+git clone https://github.com/Cruxia-Labs/sagrada-specimen
+cd sagrada-specimen
+uvx sagrada-linter read .
 ```
 
-or read it in your browser, no install — the Graveyard page on cruxia.ai
-accepts `Cruxia-Labs/sagrada-specimen`.
+No install, in a browser: paste `Cruxia-Labs/sagrada-specimen` into the
+reader at [cruxia.ai/graveyard](https://cruxia.ai/graveyard/). Runs against
+the GitHub API from your browser; check devtools.
 
-What the history contains (spoilers, honestly labeled):
+## What's planted
 
-- **one rule that walks** — deliberately killed after an incident, carried
-  back months later by a stale-branch merge nobody read
-- **one restored with paperwork** — killed, brought back, and *declared*,
-  so the reading acquits it with the decision on the books
-- **one that rests** — killed and never returned; the grave a gate would keep
-- **two never touched** — controls
+| rule | history | expected verdict |
+|---|---|---|
+| `deploy-gate` | removed 2026-02-14, back via merge 2026-05-19 | WALKING |
+| `tone` | removed 2026-03-02, back 2026-03-28, declared with `sagrada:allow` 2026-04-02 | RESTORED WITH INTENT |
+| `changelog` | removed 2026-03-20, never came back | resting |
+| `secrets`, `retry-limit` | never touched | — |
 
-Specimen values are specimens — nothing here measured anything real.
+Expected tally: `1 walking · 1 restored with intent`.
