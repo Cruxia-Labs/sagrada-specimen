@@ -1,0 +1,17 @@
+name: sagrada guard
+# Installed by `sagrada-linter guard`. ENFORCING: an undeclared resurrection fails the check.
+# The lawful path: sagrada-linter restore FILE LINE --reason "..."
+
+on: [pull_request]
+permissions:
+  contents: read
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # pinned: bump deliberately, never drift (supply-chain law)
+      - run: pipx install sagrada-linter==0.2.0
+      - run: sagrada-linter guard --check --repo .

@@ -26,3 +26,11 @@ the GitHub API from your browser; check devtools.
 | `secrets`, `retry-limit` | never touched | — |
 
 Expected tally: `1 walking · 1 restored with intent`.
+
+## The gauntlet
+
+The PR tab is part of the specimen. Pull requests that re-add a retracted
+rule without declaring it are blocked by `sagrada-linter guard --check` in
+CI, with the rule's kill history in the failure. A declared restoration
+(`sagrada:allow` + reason) passes. Try it: open a PR that brings any locked
+rule back.

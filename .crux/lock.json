@@ -1,0 +1,27 @@
+{
+ "graves": {
+  "CLAUDE.md": [
+   {
+    "definition": "Pin the payments API to v2 in every call site",
+    "killed_at": "0bdc1430dccdd5af47b640710dce490a08d18721",
+    "killed_ts": 1785377921,
+    "term": "api_version_pin"
+   },
+   {
+    "definition": "Update the changelog with every release",
+    "killed_at": "4706597cb223b317433c5f6ce9914b0a7208d3c2",
+    "killed_ts": 1773997200,
+    "term": "changelog"
+   },
+   {
+    "definition": "Every new source file starts with the license header",
+    "killed_at": "a7a412ed664935f1089ccf0904e0b167572e318d",
+    "killed_ts": 1785377921,
+    "term": "license_header"
+   }
+  ]
+ },
+ "locked_at_commit": "0bdc1430dccdd5af47b640710dce490a08d18721",
+ "note": "Rules recorded dead. Bringing one back requires paperwork: `sagrada-linter restore FILE LINE --reason ...` (the marker + the ledger). An undeclared return fails guard --check with the kill history attached.",
+ "schema": "crux-lock/v0"
+}
