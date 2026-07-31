@@ -1,0 +1,1 @@
+{"date": "2026-07-30", "definition": "Cap external API retries at three attempts", "file": "CLAUDE.md", "line": 4, "reason": "the SDK retries with backoff since 4.2; a fixed cap fights it", "residue": [], "term": "retry_limit"}
